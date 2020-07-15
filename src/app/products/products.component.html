@@ -1,0 +1,27 @@
+
+<h1>List Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>
+        <button (click)="showDetailProduct(product);">details</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="isScreenDetail">
+  <app-product-detail (deleteProduct)="deleteProduct($event);" [product]="productToDetail"></app-product-detail>
+</div>
