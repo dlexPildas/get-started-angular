@@ -32,7 +32,12 @@ export class ProductsComponent implements OnInit {
     this.isScreenDetail = false;
   }
 
-  registerNewProduct(): void {
+  changeToScreenNewProduct(): void {
     this.isRegister = !this.isRegister;
+  }
+
+  addNewProduct(product: Product): void {
+    this.products.push(product);
+    this.isRegister = false;
   }
 }
