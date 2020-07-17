@@ -15,6 +15,7 @@ export class ProductsComponent implements OnInit {
   ];
   isScreenDetail = false;
   productToDetail: Product;
+  isRegister = false;
 
   constructor() { }
 
@@ -29,5 +30,9 @@ export class ProductsComponent implements OnInit {
   deleteProduct(productToDelete: Product): void {
     this.products = this.products.filter(product => product !== productToDelete);
     this.isScreenDetail = false;
+  }
+
+  registerNewProduct(): void {
+    this.isRegister = !this.isRegister;
   }
 }

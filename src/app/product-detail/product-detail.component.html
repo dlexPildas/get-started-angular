@@ -1,5 +1,11 @@
 <h1>Product</h1>
-<input type="text" [value]="product.id" [disabled]="true"/>
-<input type="text" [value]="product.name" [disabled]="true"/>
-<input type="text" [value]="product.price" [disabled]="true"/>
-<button (click)="removeProduct();">remove</button>
+<input
+  type="text"
+  [value]="product.id"
+  [disabled]="true"
+  [class]="product.id == 1 ? 'special' : ''"
+/>
+<input type="text" [value]="product.name" [disabled]="true" />
+<input type="text" [value]="product.price" [disabled]="true" />
+<button (click)="removeProduct()">remove</button>
+

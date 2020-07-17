@@ -1,6 +1,8 @@
 
 <h1>List Products</h1>
 
+<button (click)="registerNewProduct()">Cadastrar new Product</button>
+
 <table>
   <thead>
     <tr>
@@ -24,4 +26,8 @@
 
 <div *ngIf="isScreenDetail">
   <app-product-detail (deleteProduct)="deleteProduct($event);" [product]="productToDetail"></app-product-detail>
+</div>
+
+<div *ngIf="isRegister">
+  <app-product-new></app-product-new>
 </div>
